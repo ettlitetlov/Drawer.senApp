@@ -26,9 +26,8 @@ public class AddGroupFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-
         View view = inflater.inflate(R.layout.fragment_group, container, false);    //vad som ska visas?
-        Button groupAdded = (Button) view.findViewById(R.id.Create);                //säg att knappen är skapaGrupp-knappen
+        Button groupAdded = (Button) view.findViewById(R.id.Create);                //säg att knappen är Create-knappen
         groupAdded.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
