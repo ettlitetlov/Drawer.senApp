@@ -62,5 +62,6 @@
 
 </RelativeLayout>
 
+
     <!--android:onClick="goToGroups" , ska ligga efter @+id/Groups-->
     <!--android:onClick="goToBookMeeting" , ska ligga efter text="Boka möte" -->
