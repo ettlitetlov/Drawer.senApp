@@ -38,12 +38,22 @@ public class Meeting {
             return groupName;
         }
 
-        public int gethh() {
-            return hh;
+        public String gethh() {
+            if(hh < 10){
+                String hour = "0" + hh;
+                return hour;
+            }
+            else
+                return String.format("%s",hh);
         }
 
-        public int getmm() {
-        return mm;
+        public String getmm() {
+            if(mm < 10){
+                String min = "0" + mm;
+                return min;
+            }
+            else
+            return String.format("%s",mm);
     }
 
         public int getDate() {
@@ -70,7 +80,7 @@ public class Meeting {
         // Will be used by the ArrayAdapter in the ListView
         @Override
         public String toString() {
-            return String.format("%s%d%d", groupName, hh, mm);
+            return String.format("%s%2d%2d", groupName, hh, mm);
         }
 }
 

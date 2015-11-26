@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="holo_light_primary">#6b6969</color>
+    <color name="holo_light_primary_dark">#ffffff</color>
+    <color name="background_holo_light">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="screen_background_light">#ffffff</color>
+    <color name="bright_foreground_holo_dark">#f60a0a</color>
+    <color name="dim_foreground_holo_dark">#fb0606</color>
+    <color name="primary_material_light">#9a9999</color>
+    <color name="accent_material_light">#ffcf40</color>
+    <color name="primary_dark_material_light">#0b0b0b</color>
 </resources>

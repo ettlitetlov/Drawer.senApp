@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class MainFragment extends Fragment{
 
     private ArrayList<Meeting> MeetingData = new ArrayList<Meeting>();
-    private ArrayAdapter<Meeting> MeetingAdapter;
+    private MeetingAdapter meetingAdapter;
 
     public MainFragment() {
         // Required empty public constructor
@@ -29,18 +29,22 @@ public class MainFragment extends Fragment{
         MeetingData.add(meet1);
         MeetingData.add(meet2);
         MeetingData.add(meet3);
-
-        //MeetingAdapter = new ArrayAdapter<Meeting>(getActivity(),android.R.layout.simple_list_item_1, MeetingData);
-        //setAdapter(MeetingAdapter);
-
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        meetingAdapter = new MeetingAdapter(MeetingData, getActivity());
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+
+        ListView list = (ListView)view.findViewById(R.id.listOfMeetings);
+        list.setAdapter(meetingAdapter);
+        return view;
 
     }
 
