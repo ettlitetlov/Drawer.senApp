@@ -25,8 +25,10 @@ public class AddGroupFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_group, container, false);
 
-        View view = inflater.inflate(R.layout.fragment_group, container, false);    //vad som ska visas?
+        //Det här borde funka, den det gör det visst inte.
+        /*View view = inflater.inflate(R.layout.fragment_group, container, false);    //vad som ska visas?
         Button groupAdded = (Button) view.findViewById(R.id.Create);                //säg att knappen är Create-knappen
         groupAdded.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +43,7 @@ public class AddGroupFragment extends Fragment {
             }
         });
 
-        return view;
+        return view; */
     }
 
 }

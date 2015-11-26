@@ -21,34 +21,40 @@ public class MainFragment extends Fragment {
     }
 
 
-   /* @Override
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
-    } */
+        //return inflater.inflate(R.layout.fragment_main, container, false);
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_group, container, false);
 
-        View view = inflater.inflate(R.layout.fragment_group, container, false);    //vad som ska visas?
-        Button addGroupButton = (Button) view.findViewById(R.id.skapaGrupp);                //säg att knappen är skapaGrupp-knappen
-        addGroupButton.setOnClickListener(new View.OnClickListener() {
+        Button groupButton = (Button) view.findViewById(R.id.groups);
+        groupButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View v)
-            {
-                // om man trycker på "grupp"-knappen
+            public void onClick(View v) {
                 GroupFragment fragment = new GroupFragment();
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
                         getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.commit();
+            }
+        });
+        Button bookMeetingButton = (Button) view.findViewById(R.id.BookAMeeting);
+        bookMeetingButton.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                BookAMeeting fragment = new BookAMeeting();         //ska man ändra namn på den här, så den också heter fragment i slutet?
+                android.support.v4.app.FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.commit();;
             }
         });
 
         return view;
     }
-
 
 }
