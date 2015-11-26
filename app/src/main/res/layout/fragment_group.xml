@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:text="+"
         android:id="@+id/skapaGrupp"
-        android:onClick="goToCreateGroup"
+        <!--android:onClick="goToCreateGroup"-->
         android:layout_alignTop="@+id/listView"
         android:layout_alignParentRight="true" />
 
