@@ -6,9 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
-
 import java.util.ArrayList;
+
 
 
 /**
@@ -40,7 +41,32 @@ public class MainFragment extends Fragment{
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
+        Button groupButton = (Button) view.findViewById(R.id.Groups);
+        groupButton.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+
+                GroupFragment fragment = new GroupFragment();
+                android.support.v4.app.FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.commit();
+            }
+        });
+
+        Button bookMeetingButton = (Button) view.findViewById(R.id.BookAMeeting);
+        bookMeetingButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                BookAMeeting fragment = new BookAMeeting();         //ska man ändra namn på den här, så den också heter fragment i slutet?
+                android.support.v4.app.FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.commit();;
+            }
+        });
 
         ListView list = (ListView)view.findViewById(R.id.listOfMeetings);
         list.setAdapter(meetingAdapter);
