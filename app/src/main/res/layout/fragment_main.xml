@@ -21,15 +21,15 @@
             android:id="@+id/upcommingMeetings"
             android:layout_below="@+id/meny"
             android:textSize="20dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="0dp"
             android:layout_marginLeft="10dp" />
 
         <ListView
             android:layout_width="wrap_content"
-            android:layout_height="350dp"
+            android:layout_height="380dp"
             android:layout_below="@+id/upcommingMeetings"
             android:id="@+id/listOfMeetings"
-            android:layout_marginTop="95dp" />
+            android:layout_marginTop="25dp" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -61,7 +61,6 @@
     </FrameLayout>
 
 </RelativeLayout>
-
 
     <!--android:onClick="goToGroups" , ska ligga efter @+id/Groups-->
     <!--android:onClick="goToBookMeeting" , ska ligga efter text="Boka möte" -->
