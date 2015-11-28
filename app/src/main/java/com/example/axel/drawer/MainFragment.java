@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
+
 import java.util.ArrayList;
 
 
@@ -32,6 +33,9 @@ public class MainFragment extends Fragment{
         MeetingData.add(meet3);
     }
 
+    public void onListItemClick(){
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -72,6 +76,7 @@ public class MainFragment extends Fragment{
 
         ListView list = (ListView)view.findViewById(R.id.listOfMeetings);
         list.setAdapter(meetingAdapter);
+
         return view;
 
     }
