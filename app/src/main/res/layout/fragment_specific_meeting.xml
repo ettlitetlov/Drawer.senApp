@@ -73,7 +73,8 @@
             android:text="Idag ska di diskutera om josefine verkligen behövs i 3Cant"
             android:id="@+id/description_meeting"
             android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center" />
 
     </LinearLayout>
 </RelativeLayout>
