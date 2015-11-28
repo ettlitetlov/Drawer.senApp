@@ -113,9 +113,9 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
             fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_share) {
+       /* } else if (id == R.id.nav_share) { //tror att de här två är borttagna från menyn nu
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_send) { */
 
         }
 
