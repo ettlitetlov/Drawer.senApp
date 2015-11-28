@@ -14,17 +14,6 @@
         android:layout_height="match_parent"
         android:layout_marginTop="50dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Kommande möten"
-            android:id="@+id/upcommingMeetings"
-            android:layout_below="@+id/meny"
-            android:textSize="20dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginLeft="5dp" />
-
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="380dp"
@@ -58,6 +47,19 @@
                 android:background="@color/accent_material_light"
                 android:id="@+id/BookAMeeting" />
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Kommande möten"
+            android:id="@+id/upcommingMeetings"
+            android:layout_below="@+id/meny"
+            android:textSize="25dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="5dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal|top" />
 
     </FrameLayout>
 
