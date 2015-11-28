@@ -24,7 +24,8 @@
             android:layout_margin="10dp"
             android:layout_centerHorizontal="true"
 
-            android:layout_gravity="center_horizontal|bottom" />
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="#acce31" />
 
         <TextView
             android:layout_height="wrap_content"
