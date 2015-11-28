@@ -25,7 +25,9 @@
         android:textAlignment="gravity"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="5dp" />
+        android:layout_margin="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
 
 </RelativeLayout>
 
