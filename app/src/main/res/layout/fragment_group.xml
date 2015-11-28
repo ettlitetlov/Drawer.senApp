@@ -9,7 +9,7 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="470dp"
-        android:id="@+id/listView"
+        android:id="@+id/listOfGroups"
         android:layout_centerHorizontal="true"
         android:layout_alignParentEnd="false"
         android:layout_alignParentBottom="true" />
@@ -20,7 +20,7 @@
         android:text="+"
         android:id="@+id/skapaGrupp"
 
-        android:layout_alignTop="@+id/listView"
+        android:layout_alignTop="@+id/listOfGroups"
         android:layout_alignParentRight="true" />
 
 </RelativeLayout>

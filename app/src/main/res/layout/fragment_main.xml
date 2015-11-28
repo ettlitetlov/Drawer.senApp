@@ -11,7 +11,8 @@
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -22,7 +23,7 @@
             android:layout_below="@+id/meny"
             android:textSize="20dp"
             android:layout_marginTop="0dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="5dp" />
 
         <ListView
             android:layout_width="wrap_content"
@@ -46,7 +47,7 @@
                 android:layout_height="match_parent"
                 android:text="Grupper"
                 android:id="@+id/Groups"
-
+                android:background="@color/accent_material_light"
                 android:layout_marginRight="20dp" />
 
             <Button
@@ -54,7 +55,7 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:text="Boka möte"
-
+                android:background="@color/accent_material_light"
                 android:id="@+id/BookAMeeting" />
         </LinearLayout>
 

@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 /**
@@ -14,9 +17,19 @@ import android.widget.Button;
  */
 public class GroupFragment extends Fragment {
 
+    private ArrayList<Group> groupData = new ArrayList<Group>();
+    private GroupAdapter groupAdapter;
 
     public GroupFragment() {
         // Required empty public constructor
+        String[] people1 = {"Stefan", "Jan", "Annie"};
+        Group group1 = new Group("Regeringen", people1, "picture", "Bestämma saker" );
+        String[] people2 = {"Elin", "Rebecca", "Josefine", "Yrsa", "Axel"};
+        Group group2 = new Group("Koma Projekt", people2, "picture", "Bestämma saker" );
+
+        groupData.add(group1);
+        groupData.add(group2);
+
     }
 
    /* @Override
@@ -29,6 +42,9 @@ public class GroupFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        groupAdapter = new GroupAdapter(groupData, getActivity());
+
         //testar lite, här under är det tillagt
         View view = inflater.inflate(R.layout.fragment_group, container, false);    //vad som ska visas?
         Button addGroupButton = (Button) view.findViewById(R.id.skapaGrupp);                //säg att knappen är skapaGrupp-knappen
@@ -46,6 +62,10 @@ public class GroupFragment extends Fragment {
 
             }
         });
+
+        ListView list = (ListView)view.findViewById(R.id.listOfGroups);
+        list.setAdapter(groupAdapter);
+
         return view;
     }
 

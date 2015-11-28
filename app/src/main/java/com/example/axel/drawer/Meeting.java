@@ -56,8 +56,8 @@ public class Meeting {
             return String.format("%s",mm);
     }
 
-        public int getDate() {
-        return date;
+        public String getDate() {
+            return String.format("%d", date);
     }
 
         public String getPlace() {

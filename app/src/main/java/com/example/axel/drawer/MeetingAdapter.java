@@ -45,10 +45,13 @@ public class MeetingAdapter extends BaseAdapter{
 
 
         RelativeLayout layout = (RelativeLayout)layoutInflater.inflate(R.layout.item_meeting_list, parent, false);
+        TextView date = (TextView)layout.findViewById(R.id.list_date);
+        date.setText(meetings.get(position).getDate());
         TextView group = (TextView)layout.findViewById(R.id.list_groupname);
         group.setText(meetings.get(position).getGroupName());
         TextView time = (TextView)layout.findViewById(R.id.list_time);
-        time.setText(meetings.get(position).gethh()+":"+meetings.get(position).getmm());
+        time.setText(meetings.get(position).gethh() + ":" + meetings.get(position).getmm());
+
 
         return layout;
     }
