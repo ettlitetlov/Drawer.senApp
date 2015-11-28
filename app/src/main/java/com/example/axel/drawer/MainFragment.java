@@ -51,6 +51,7 @@ public class MainFragment extends Fragment{
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
                         getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
             }
         });
@@ -64,6 +65,7 @@ public class MainFragment extends Fragment{
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
                         getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();;
             }
         });
