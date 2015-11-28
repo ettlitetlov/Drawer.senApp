@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SpecificMeetingFragment extends Fragment {
@@ -26,16 +27,25 @@ public class SpecificMeetingFragment extends Fragment {
         incheckad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            /*//Hoppa tillbaka till group-sidan igen
-            GroupFragment fragment = new GroupFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
-            fragmentTransaction.replace(R.id.fragment_container, fragment);
-            fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
-            fragmentTransaction.commit();*/
 
-                // Visa ett meddelande om att gruppen är tillagd
+                // Visa ett meddelande om incheckning
                 String message = "Incheckad!";
+                Toast toast = Toast.makeText(getActivity().getApplicationContext(), message, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+
+            }
+        });
+
+        TextView kanintekomma = (TextView) view.findViewById(R.id.unavailable_clickable);         //klickbar text
+        kanintekomma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+
+
+                // Visa ett meddelande om att man tryckt på texten
+                String message = "Nu får du bjuda på kaffe nästa gång!";
                 Toast toast = Toast.makeText(getActivity().getApplicationContext(), message, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
