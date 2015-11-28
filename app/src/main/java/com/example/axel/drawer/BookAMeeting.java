@@ -1,7 +1,5 @@
 package com.example.axel.drawer;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.Gravity;
@@ -57,7 +55,8 @@ public class BookAMeeting extends Fragment {
             @Override
             public void onClick(View v)
             {
-                // Skicka tillbaka användaren till där den var innan?
+                // Skicka tillbaka användaren till där den var innan?       <-- kolla upp detta
+                //tillfälligt kommer användare tillbaka till startsidan
                 MainFragment fragment = new MainFragment();
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
                         getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
@@ -65,8 +64,8 @@ public class BookAMeeting extends Fragment {
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
 
-                // Visa ett meddelande om att mötet är tillagd
-                String message = "Mötet tillagt!";
+                // Visa ett meddelande om att man tröck (heh) på kryss-knappen
+                String message = "Ojoj, det blev inget möte.";
                 Toast toast = Toast.makeText(getActivity().getApplicationContext(), message, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
