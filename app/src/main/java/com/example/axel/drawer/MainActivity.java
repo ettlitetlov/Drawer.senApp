@@ -112,6 +112,12 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
 
         } else if (id == R.id.nav_slideshow) {
+            SpecificGroupFragment fragment = new SpecificGroupFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_manage) {
 
