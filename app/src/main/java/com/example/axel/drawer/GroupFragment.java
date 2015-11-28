@@ -45,6 +45,8 @@ public class GroupFragment extends Fragment {
 
         groupAdapter = new GroupAdapter(groupData, getActivity());
 
+
+
         //testar lite, här under är det tillagt
         View view = inflater.inflate(R.layout.fragment_group, container, false);    //vad som ska visas?
         Button addGroupButton = (Button) view.findViewById(R.id.skapaGrupp);                //säg att knappen är skapaGrupp-knappen

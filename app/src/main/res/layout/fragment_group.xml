@@ -15,13 +15,17 @@
         android:layout_alignParentBottom="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:text="+"
         android:id="@+id/skapaGrupp"
-
-        android:layout_alignTop="@+id/listOfGroups"
-        android:layout_alignParentRight="true" />
+        android:background="@drawable/roundedbutton"
+        android:textSize="40dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="gravity"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="5dp" />
 
 </RelativeLayout>
 
