@@ -53,7 +53,7 @@ public class BookAMeeting extends Fragment {
 
         //Det borde vara rätt med ImageButton istället för Button, men det märker vi när knappen
         //syns så att vi kan trycka på den
-        ImageButton cancelAddMeeting = (ImageButton) view.findViewById(R.id.cancelMeeting);   //säg att knappen är cancel-knappen
+        Button cancelAddMeeting = (Button) view.findViewById(R.id.cancelMeeting);   //säg att knappen är cancel-knappen
         cancelAddMeeting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -66,7 +66,6 @@ public class BookAMeeting extends Fragment {
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
-                //toolbar.setTitle("SenApp");                     //ändra titeln till "SenApp"
 
                 // Visa ett meddelande om att man tröck (heh) på kryss-knappen
                 String message = "Ojoj, det blev inget möte.";
