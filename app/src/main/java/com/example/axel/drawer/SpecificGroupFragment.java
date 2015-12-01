@@ -9,18 +9,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class SpecificGroupFragment extends Fragment {
 
-    //Toolbar toolbar = null;             //så att vi ska kunna ändra titeln
-
     private ArrayList<Statistic> statisticData = new ArrayList<Statistic>();
     private StatisticAdapter statisticAdapter;
     private ArrayList<Meeting> meetingData = new ArrayList<Meeting>();
-    private MeetingAdapter meetingAdapter;
+    private MeetingAdapterInSpecificGroup meetingAdapter;
 
 
     public SpecificGroupFragment() {
@@ -30,15 +30,21 @@ public class SpecificGroupFragment extends Fragment {
         Statistic stat1 = new Statistic("Stefan", 45);
         Statistic stat2 = new Statistic("Jan", 27);
         Statistic stat3 = new Statistic("Annie", 7);
+        Statistic stat4 = new Statistic("Gustav", 4);
+        Statistic stat5 = new Statistic("Åsa", 2);
 
         statisticData.add(stat1);
         statisticData.add(stat2);
         statisticData.add(stat3);
+        statisticData.add(stat4);
+        statisticData.add(stat5);
+
 
         Meeting meet1 = new Meeting("Regeringen", 12, 0, 151201, "Stadshuset", "Bestämma vem som åker ut denna veckan");
         meetingData.add(meet1);
-    }
 
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,15 +52,13 @@ public class SpecificGroupFragment extends Fragment {
         // Inflate the layout for this fragment
 
         statisticAdapter = new StatisticAdapter(statisticData, getActivity());
-        meetingAdapter = new MeetingAdapter(meetingData, getActivity());
-
+        meetingAdapter = new MeetingAdapterInSpecificGroup(meetingData, getActivity());
 
         View view = inflater.inflate(R.layout.fragment_specific_group, container, false);    //vad som ska visas
         Button addGroupButton = (Button) view.findViewById(R.id.newMeeting);                //säg att knappen är nyttMöte-knappen
         addGroupButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 // Skicka vidare användaren till nästa fragmenten (BookAMeeting)
                 BookAMeeting fragment = new BookAMeeting();
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
@@ -67,13 +71,46 @@ public class SpecificGroupFragment extends Fragment {
             }
         });
 
+
+        TextView groupName = (TextView)view.findViewById(R.id.groupName);
+        groupName.setText("Regeringen");
+        TextView no_members = (TextView)view.findViewById(R.id.groupMembers);
+        no_members.setText(statisticData.size() + " medlemmar");
+
         ListView listStat = (ListView)view.findViewById(R.id.listStats);
         listStat.setAdapter(statisticAdapter);
+        //listStat.setScrollContainer(false);
+        justifyListViewHeightBasedOnChildren(listStat);
+
         ListView listMeeting = (ListView)view.findViewById(R.id.listMeeting);
+        //listMeeting.setScrollContainer(false);
         listMeeting.setAdapter(meetingAdapter);
+        justifyListViewHeightBasedOnChildren(listMeeting);
 
         return view;
 
+    }
+
+
+    public void justifyListViewHeightBasedOnChildren (ListView listView) {
+
+        ListAdapter adapter = listView.getAdapter();
+
+        if (adapter == null) {
+            return;
+        }
+        ViewGroup vg = listView;
+        int totalHeight = 0;
+        for (int i = 0; i < adapter.getCount(); i++) {
+            View listItem = adapter.getView(i, null, vg);
+            listItem.measure(0, 0);
+            totalHeight += listItem.getMeasuredHeight();
+        }
+
+        ViewGroup.LayoutParams par = listView.getLayoutParams();
+        par.height = totalHeight + (listView.getDividerHeight() * (adapter.getCount() - 1));
+        listView.setLayoutParams(par);
+        listView.requestLayout();
     }
 
 }

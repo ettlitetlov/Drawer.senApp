@@ -23,7 +23,6 @@ public class MainFragment extends Fragment{
 
     private ArrayList<Meeting> MeetingData = new ArrayList<Meeting>();
     private MeetingAdapter meetingAdapter;
-    //Toolbar toolbar = null;         //så att vi kan ändra titeln
 
     public MainFragment() {
         // Required empty public constructor
@@ -49,6 +48,7 @@ public class MainFragment extends Fragment{
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
+        //Grupp-knapp
         Button groupButton = (Button) view.findViewById(R.id.Groups);
         groupButton.setOnClickListener(new View.OnClickListener() {
 
@@ -65,6 +65,7 @@ public class MainFragment extends Fragment{
             }
         });
 
+        //Boka möte-knapp
         Button bookMeetingButton = (Button) view.findViewById(R.id.BookAMeeting);
         bookMeetingButton.setOnClickListener(new View.OnClickListener() {
 

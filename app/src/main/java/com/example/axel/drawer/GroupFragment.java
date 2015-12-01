@@ -20,7 +20,6 @@ public class GroupFragment extends Fragment {
 
     private ArrayList<Group> groupData = new ArrayList<Group>();
     private GroupAdapter groupAdapter;
-    //Toolbar toolbar = null;                  //så att vi ska kunna ändra titeln
 
     public GroupFragment() {
         // Required empty public constructor
@@ -41,6 +40,7 @@ public class GroupFragment extends Fragment {
         groupAdapter = new GroupAdapter(groupData, getActivity());
 
         View view = inflater.inflate(R.layout.fragment_group, container, false);    //vad som ska visas?
+        //skapa grupp-knapp
         Button addGroupButton = (Button) view.findViewById(R.id.skapaGrupp);                //säg att knappen är skapaGrupp-knappen
         addGroupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,8 +53,6 @@ public class GroupFragment extends Fragment {
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
-                //toolbar.setTitle("Lägg till grupp");            //ändra titeln
-
 
             }
         });

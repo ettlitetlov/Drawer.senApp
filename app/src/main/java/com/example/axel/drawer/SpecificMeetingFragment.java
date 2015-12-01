@@ -37,6 +37,7 @@ public class SpecificMeetingFragment extends Fragment {
             }
         });
 
+        //Klickbar "kan inte komma"-text
         TextView kanintekomma = (TextView) view.findViewById(R.id.unavailable_clickable);         //klickbar text
         kanintekomma.setOnClickListener(new View.OnClickListener() {
             @Override
