@@ -17,8 +17,6 @@ import android.widget.Toast;
  */
 public class BookAMeeting extends Fragment {
 
-    //Toolbar toolbar = null;                             //så att vi ska kunna ändra titeln
-
     public BookAMeeting() {
         // Required empty public constructor
     }
@@ -26,8 +24,9 @@ public class BookAMeeting extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //testar lite, här under är det tillagt
+
         View view = inflater.inflate(R.layout.fragment_book_ameeting, container, false);    //vad som ska visas
+        //boka möte-knappen
         Button addGroupMeeting = (Button) view.findViewById(R.id.createMeeting);                //säg att knappen är bokaMöte-knappen
         addGroupMeeting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,11 +35,10 @@ public class BookAMeeting extends Fragment {
                 // Skicka vidare användaren till nästa fragmenten (MainFragment)
                 MainFragment fragment = new MainFragment();
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
-                        getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
+                        getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
-                //toolbar.setTitle("SenApp");                     //ändra titeln till "SenApp"
 
                 // Visa ett meddelande om att mötet är tillagd
                 String message = "Mötet tillagt!";
@@ -51,8 +49,7 @@ public class BookAMeeting extends Fragment {
             }
         });
 
-        //Det borde vara rätt med ImageButton istället för Button, men det märker vi när knappen
-        //syns så att vi kan trycka på den
+        //avbryt-knappen
         Button cancelAddMeeting = (Button) view.findViewById(R.id.cancelMeeting);   //säg att knappen är cancel-knappen
         cancelAddMeeting.setOnClickListener(new View.OnClickListener() {
             @Override

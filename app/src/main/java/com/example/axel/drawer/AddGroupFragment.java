@@ -27,8 +27,9 @@ public class AddGroupFragment extends Fragment {
         // Inflate the layout for this fragment
 
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Lägg till grupp");  //ändra toolbar-titeln
-        //Det här borde funka, den det gör det visst inte.
-        View view = inflater.inflate(R.layout.fragment_add_group, container, false);    //vad som ska visas?
+
+        View view = inflater.inflate(R.layout.fragment_add_group, container, false);    //vad som ska visas
+        //skapa grupp-knappen
         Button groupAdded = (Button) view.findViewById(R.id.Create);                //säg att knappen är Create-knappen
         groupAdded.setOnClickListener(new View.OnClickListener() {
             @Override
