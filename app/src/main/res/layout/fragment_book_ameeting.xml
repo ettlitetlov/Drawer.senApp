@@ -98,7 +98,7 @@
         android:layout_below="@+id/chooseGroup"
         android:layout_alignParentStart="true"
         android:autoText="false"
-        android:hint="Tid"
+        android:hint="Tiden"
         android:paddingLeft="10dp"
         android:layout_toLeftOf="@+id/createMeeting" />
 
