@@ -15,10 +15,6 @@ public class Group {
     public Group(String theGroupName, String[] theMembers, String thePicture, String theDescription){
         groupName = theGroupName;
         members = theMembers;
-/*
-        for(int i = 0; i < theMembers.length; i++){
-            members[i] = theMembers[i];
-        }  */
         picture = thePicture;
         description = theDescription;
     }
