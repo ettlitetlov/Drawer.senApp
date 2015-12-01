@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity
 
     NavigationView navigationView = null;
     Toolbar toolbar = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +88,8 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
             fragmentTransaction.commit();
+            toolbar.setTitle("SenApp");                     //ändra titeln till "SenApp"
+
             // Handle the camera action
         } else if (id == R.id.groups) {
             GroupFragment fragment = new GroupFragment();
@@ -95,6 +98,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
             fragmentTransaction.commit();
+            toolbar.setTitle("Grupper");                    //ändra titeln till "Grupper"
 
         } else if (id == R.id.nav_slideshow) {
             SpecificGroupFragment fragment = new SpecificGroupFragment();
@@ -103,6 +107,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
             fragmentTransaction.commit();
+            toolbar.setTitle("Specifik grupp");           //ändra titeln till "specifik grupp"
 
         } else if (id == R.id.nav_manage) {
 
@@ -112,8 +117,9 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
             fragmentTransaction.commit();
+            toolbar.setTitle("Specifikt möte");             //ändra titeln till "specifikt möte"
 
-       /* } else if (id == R.id.nav_share) { //tror att de här två är borttagna från menyn nu
+       /* } else if (id == R.id.nav_share) { //tror att de här två är borttagna från menyn nu   
 
         } else if (id == R.id.nav_send) { */
 

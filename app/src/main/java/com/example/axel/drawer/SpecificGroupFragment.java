@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class SpecificGroupFragment extends Fragment {
+
+    //Toolbar toolbar = null;             //så att vi ska kunna ändra titeln
 
     public SpecificGroupFragment() {
         // Required empty public constructor
@@ -35,12 +38,13 @@ public class SpecificGroupFragment extends Fragment {
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
+                //toolbar.setTitle("Boka möte");                  //ändra titeln
 
             }
         });
 
         return view;
-        //return inflater.inflate(R.layout.fragment_specific_group, container, false);
+
     }
 
 }

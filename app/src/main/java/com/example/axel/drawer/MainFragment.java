@@ -3,6 +3,7 @@ package com.example.axel.drawer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ public class MainFragment extends Fragment{
 
     private ArrayList<Meeting> MeetingData = new ArrayList<Meeting>();
     private MeetingAdapter meetingAdapter;
+    //Toolbar toolbar = null;         //så att vi kan ändra titeln
 
     public MainFragment() {
         // Required empty public constructor
@@ -57,6 +59,7 @@ public class MainFragment extends Fragment{
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
+                //toolbar.setTitle("Grupper");                    //ändra titeln
             }
         });
 
@@ -70,7 +73,8 @@ public class MainFragment extends Fragment{
                         getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
-                fragmentTransaction.commit();;
+                fragmentTransaction.commit();
+                //toolbar.setTitle("Boka möte");                  //ändra titeln
             }
         });
 

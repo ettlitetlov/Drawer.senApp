@@ -45,7 +45,8 @@ public class SpecificMeetingFragment extends Fragment {
 
 
                 // Visa ett meddelande om att man tryckt på texten
-                String message = "Nu får du bjuda på kaffe nästa gång!";
+                //String message = "Nu får du bjuda på kaffe nästa gång!";
+                String message = "Glöm inte att det kanske finns någon som hellre vill ha saft! #bjudpåfika";
                 Toast toast = Toast.makeText(getActivity().getApplicationContext(), message, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();

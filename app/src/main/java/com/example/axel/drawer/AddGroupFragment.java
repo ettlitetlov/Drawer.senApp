@@ -2,6 +2,7 @@ package com.example.axel.drawer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,11 +16,11 @@ import android.widget.Toast;
  */
 public class AddGroupFragment extends Fragment {
 
+    //Toolbar toolbar = null;                             //så att vi ska kunna ändra titeln
 
     public AddGroupFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,6 +42,7 @@ public class AddGroupFragment extends Fragment {
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
+                //toolbar.setTitle("Grupper");
 
                 // Visa ett meddelande om att gruppen är tillagd
                 String message = "Grupp tillagd!";
