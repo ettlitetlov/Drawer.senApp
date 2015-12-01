@@ -11,10 +11,10 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:id="@+id/chooseGroup"
-             android:spinnerMode="dropdown"
-             android:layout_below="@+id/meny"
+             android:spinnerMode="dialog"
+             android:layout_below="@+id/Titel"
              android:layout_alignParentStart="true"
-             android:layout_marginTop="30dp" />
+             android:layout_marginTop="50dp" />
 
          <TextView
              android:layout_width="wrap_content"
@@ -22,8 +22,9 @@
              android:textAppearance="?android:attr/textAppearanceMedium"
              android:text="Plats:"
              android:id="@+id/place"
-             android:layout_below="@+id/chooseGroup"
-             android:layout_alignParentStart="true" />
+             android:layout_below="@+id/add_time"
+             android:layout_alignParentStart="true"
+             android:layout_marginTop="20dp" />
 
          <EditText
              android:layout_width="250dp"
@@ -41,7 +42,7 @@
              android:id="@+id/descriptionMeeting"
              android:layout_below="@+id/editText3"
              android:layout_alignParentStart="true"
-             android:layout_marginTop="140dp" />
+             android:layout_marginTop="20dp" />
 
          <EditText
              android:layout_width="250dp"
@@ -66,9 +67,43 @@
          <Button
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Skapa"
+             android:text="Boka"
              android:id="@+id/createMeeting"
              android:layout_alignParentBottom="true"
-             android:layout_centerHorizontal="true" />
+             android:layout_centerHorizontal="true"
+             android:nestedScrollingEnabled="false" />
 
-     </RelativeLayout>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/add_time"
+        android:layout_below="@+id/chooseGroup"
+        android:layout_alignParentStart="true"
+        android:autoText="false"
+        android:hint="Tid"
+        android:layout_toStartOf="@+id/createMeeting" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/add_Date"
+        android:layout_alignBottom="@+id/add_time"
+        android:layout_alignEnd="@+id/editText3"
+        android:layout_toEndOf="@+id/add_time"
+        android:hint="Datum"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Boka möte"
+        android:id="@+id/Titel"
+        android:layout_below="@+id/Meny"
+        android:layout_alignEnd="@+id/createMeeting"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>
