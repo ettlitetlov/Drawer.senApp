@@ -17,8 +17,6 @@ import java.util.ArrayList;
 
 public class SpecificGroupFragment extends Fragment {
 
-    //Toolbar toolbar = null;             //så att vi ska kunna ändra titeln
-
     private ArrayList<Statistic> statisticData = new ArrayList<Statistic>();
     private StatisticAdapter statisticAdapter;
     private ArrayList<Meeting> meetingData = new ArrayList<Meeting>();

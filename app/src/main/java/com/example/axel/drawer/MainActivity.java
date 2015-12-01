@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
             toolbar.setTitle("SenApp");                     //ändra titeln till "SenApp"
 
-            // Handle the camera action
+            // Grupper
         } else if (id == R.id.groups) {
             GroupFragment fragment = new GroupFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
