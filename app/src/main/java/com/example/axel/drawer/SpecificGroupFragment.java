@@ -2,6 +2,9 @@ package com.example.axel.drawer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +17,13 @@ import java.util.ArrayList;
 
 public class SpecificGroupFragment extends Fragment {
 
+    //Toolbar toolbar = null;             //så att vi ska kunna ändra titeln
+
     private ArrayList<Statistic> statisticData = new ArrayList<Statistic>();
     private StatisticAdapter statisticAdapter;
     private ArrayList<Meeting> meetingData = new ArrayList<Meeting>();
     private MeetingAdapterInSpecificGroup meetingAdapter;
+
 
     public SpecificGroupFragment() {
         // Required empty public constructor
@@ -62,6 +68,7 @@ public class SpecificGroupFragment extends Fragment {
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Boka möte");    //ändra titeln
 
             }
         });
@@ -83,7 +90,7 @@ public class SpecificGroupFragment extends Fragment {
         justifyListViewHeightBasedOnChildren(listMeeting);
 
         return view;
-        //return inflater.inflate(R.layout.fragment_specific_group, container, false);
+
     }
 
 

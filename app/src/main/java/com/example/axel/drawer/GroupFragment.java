@@ -3,6 +3,7 @@ package com.example.axel.drawer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ public class GroupFragment extends Fragment {
 
     private ArrayList<Group> groupData = new ArrayList<Group>();
     private GroupAdapter groupAdapter;
+    //Toolbar toolbar = null;                  //så att vi ska kunna ändra titeln
 
     public GroupFragment() {
         // Required empty public constructor
@@ -32,22 +34,12 @@ public class GroupFragment extends Fragment {
 
     }
 
-   /* @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_group, container, false);
-    } */
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         groupAdapter = new GroupAdapter(groupData, getActivity());
 
-
-
-        //testar lite, här under är det tillagt
         View view = inflater.inflate(R.layout.fragment_group, container, false);    //vad som ska visas?
         Button addGroupButton = (Button) view.findViewById(R.id.skapaGrupp);                //säg att knappen är skapaGrupp-knappen
         addGroupButton.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +53,8 @@ public class GroupFragment extends Fragment {
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
+                //toolbar.setTitle("Lägg till grupp");            //ändra titeln
+
 
             }
         });

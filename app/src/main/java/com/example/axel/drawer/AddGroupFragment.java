@@ -2,6 +2,8 @@ package com.example.axel.drawer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,18 +17,16 @@ import android.widget.Toast;
  */
 public class AddGroupFragment extends Fragment {
 
-
     public AddGroupFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_add_group, container, false);
 
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Lägg till grupp");  //ändra toolbar-titeln
         //Det här borde funka, den det gör det visst inte.
         View view = inflater.inflate(R.layout.fragment_add_group, container, false);    //vad som ska visas?
         Button groupAdded = (Button) view.findViewById(R.id.Create);                //säg att knappen är Create-knappen
@@ -41,6 +41,7 @@ public class AddGroupFragment extends Fragment {
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Grupper"); //ändra toolbar-titeln
 
                 // Visa ett meddelande om att gruppen är tillagd
                 String message = "Grupp tillagd!";

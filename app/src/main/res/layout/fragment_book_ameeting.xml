@@ -2,7 +2,7 @@
      xmlns:tools="http://schemas.android.com/tools"
      android:layout_width="match_parent"
      android:layout_height="match_parent"
-     android:layout_marginTop="65dp"
+     android:layout_marginTop="55dp"
      tools:context="com.example.axel.drawer.BookAMeeting">
 
 
@@ -14,17 +14,23 @@
              android:spinnerMode="dialog"
              android:layout_below="@+id/Titel"
              android:layout_alignParentStart="true"
+             android:paddingLeft="10dp"
              android:layout_marginTop="50dp" />
 
          <TextView
-             android:layout_width="wrap_content"
+             android:layout_width="fill_parent"
              android:layout_height="wrap_content"
              android:textAppearance="?android:attr/textAppearanceMedium"
-             android:text="Plats:"
+             android:text="PLATS"
+             android:textColor="#ffffff"
              android:id="@+id/place"
              android:layout_below="@+id/add_time"
              android:layout_alignParentStart="true"
-             android:layout_marginTop="20dp" />
+             android:layout_marginTop="20dp"
+             android:paddingTop="5dp"
+             android:paddingBottom="5dp"
+             android:paddingLeft="10dp"
+             android:background="#e9be14"/>
 
          <EditText
              android:layout_width="250dp"
@@ -32,17 +38,23 @@
              android:id="@+id/editText3"
              android:layout_below="@+id/place"
              android:layout_alignParentStart="true"
+             android:paddingLeft="10dp"
              android:hint="t.ex. TP2" />
 
          <TextView
-             android:layout_width="wrap_content"
+             android:layout_width="fill_parent"
              android:layout_height="wrap_content"
              android:textAppearance="?android:attr/textAppearanceMedium"
-             android:text="Beskrivning:"
+             android:text="BESKRIVNING"
+             android:textColor="#ffffff"
              android:id="@+id/descriptionMeeting"
              android:layout_below="@+id/editText3"
              android:layout_alignParentStart="true"
-             android:layout_marginTop="20dp" />
+             android:layout_marginTop="20dp"
+             android:paddingTop="5dp"
+             android:paddingBottom="5dp"
+             android:paddingLeft="10dp"
+             android:background="#e9be14"/>
 
          <EditText
              android:layout_width="250dp"
@@ -53,25 +65,29 @@
              android:layout_below="@+id/descriptionMeeting"
              android:layout_alignParentStart="true"
              android:minLines="3"
+             android:layout_marginLeft="10dp"
              android:hint="t.ex. &quot;Diskussion angående störta gamla styrelsen&quot;" />
-
-         <ImageButton
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:id="@+id/cancelMeeting"
-             android:layout_alignParentTop="true"
-             android:layout_toEndOf="@+id/editText3"
-             android:layout_marginStart="35dp"
-             android:src="@android:drawable/ic_menu_close_clear_cancel" />
 
          <Button
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Boka"
+             android:text="BOKA"
              android:id="@+id/createMeeting"
-             android:layout_alignParentBottom="true"
-             android:layout_centerHorizontal="true"
-             android:nestedScrollingEnabled="false" />
+             android:nestedScrollingEnabled="false"
+             android:background="#e9be14"
+             android:layout_marginRight="10dp"
+             android:layout_marginLeft="80dp"
+             android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:text="AVBRYT"
+        android:id="@+id/cancelMeeting"
+        android:background="#e9be14"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/createMeeting" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -82,8 +98,9 @@
         android:layout_below="@+id/chooseGroup"
         android:layout_alignParentStart="true"
         android:autoText="false"
-        android:hint="Tid"
-        android:layout_toStartOf="@+id/createMeeting" />
+        android:hint="Tiden"
+        android:paddingLeft="10dp"
+        android:layout_toLeftOf="@+id/createMeeting" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -94,16 +111,23 @@
         android:layout_alignBottom="@+id/add_time"
         android:layout_alignEnd="@+id/editText3"
         android:layout_toEndOf="@+id/add_time"
+        android:layout_marginLeft="10dp"
         android:hint="Datum"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Boka möte"
+        android:text="BOKA MÖTE"
+        android:textColor="#ffffff"
         android:id="@+id/Titel"
-        android:layout_below="@+id/Meny"
-        android:layout_alignEnd="@+id/createMeeting"
-        android:layout_marginTop="20dp" />
+        android:background="#e9be14"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
 
 </RelativeLayout>
