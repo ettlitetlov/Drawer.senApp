@@ -2,6 +2,7 @@ package com.example.axel.drawer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -61,7 +62,7 @@ public class SpecificGroupFragment extends Fragment {
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
-                //toolbar.setTitle("Boka möte");                  //ändra titeln
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Boka möte");    //ändra titeln
 
             }
         });

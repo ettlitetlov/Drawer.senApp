@@ -3,6 +3,7 @@ package com.example.axel.drawer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,7 @@ public class MainFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("SenApp"); //ändra toolbar-titeln
         meetingAdapter = new MeetingAdapter(MeetingData, getActivity());
 
         // Inflate the layout for this fragment
@@ -59,7 +61,7 @@ public class MainFragment extends Fragment{
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
-                //toolbar.setTitle("Grupper");                    //ändra titeln
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Grupper");  //ändra toolbar-titeln
             }
         });
 
@@ -68,13 +70,13 @@ public class MainFragment extends Fragment{
 
             @Override
             public void onClick(View v) {
-                BookAMeeting fragment = new BookAMeeting();         //ska man ändra namn på den här, så den också heter fragment i slutet?
+                BookAMeeting fragment = new BookAMeeting();  //ska man ändra namn på den här, så den också heter fragment i slutet?
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
                         getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
-                //toolbar.setTitle("Boka möte");                  //ändra titeln
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Boka möte"); //ändra toolbar-titeln
             }
         });
 
