@@ -17,4 +17,6 @@
     <color name="menu_background">#f23450</color>
     <color name="menu_pressed_background">#23f450</color>
     <color name="some_background">#3634f4</color>
+    <color name="primary_material_dark">#e9be14</color>
+    <color name="primary_dark_material_dark">#060500</color>
 </resources>

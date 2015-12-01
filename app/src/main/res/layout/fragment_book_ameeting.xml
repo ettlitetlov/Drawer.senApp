@@ -12,7 +12,6 @@
              android:layout_height="wrap_content"
              android:id="@+id/chooseGroup"
              android:spinnerMode="dialog"
-             android:layout_below="@+id/Titel"
              android:layout_alignParentStart="true"
              android:paddingLeft="10dp"
              android:layout_marginTop="50dp" />
@@ -22,6 +21,7 @@
              android:layout_height="wrap_content"
              android:textAppearance="?android:attr/textAppearanceMedium"
              android:text="PLATS"
+             android:textStyle="bold"
              android:textColor="#ffffff"
              android:id="@+id/place"
              android:layout_below="@+id/add_time"
@@ -47,6 +47,7 @@
              android:textAppearance="?android:attr/textAppearanceMedium"
              android:text="BESKRIVNING"
              android:textColor="#ffffff"
+             android:textStyle="bold"
              android:id="@+id/descriptionMeeting"
              android:layout_below="@+id/editText3"
              android:layout_alignParentStart="true"
@@ -72,21 +73,27 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="BOKA"
+             android:textColor="#ffffff"
+             android:textStyle="bold"
              android:id="@+id/createMeeting"
              android:nestedScrollingEnabled="false"
              android:background="#e9be14"
-             android:layout_marginRight="10dp"
-             android:layout_marginLeft="80dp"
-             android:layout_alignParentBottom="true"/>
+             android:layout_marginRight="60dp"
+             android:layout_marginLeft="50dp"
+             android:layout_marginBottom="10dp"
+             android:layout_alignTop="@+id/cancelMeeting"
+             android:layout_alignStart="@+id/MeetingDescription" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="fitXY"
         android:text="AVBRYT"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
         android:id="@+id/cancelMeeting"
-        android:background="#e9be14"
+        android:background="#d77127"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
         android:layout_toRightOf="@+id/createMeeting" />
 
     <EditText
@@ -98,9 +105,9 @@
         android:layout_below="@+id/chooseGroup"
         android:layout_alignParentStart="true"
         android:autoText="false"
-        android:hint="Tiden"
+        android:hint="Tid"
         android:paddingLeft="10dp"
-        android:layout_toLeftOf="@+id/createMeeting" />
+        android:layout_toStartOf="@+id/add_Date" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -108,25 +115,9 @@
         android:inputType="date"
         android:ems="10"
         android:id="@+id/add_Date"
-        android:layout_alignBottom="@+id/add_time"
-        android:layout_alignEnd="@+id/editText3"
-        android:layout_toEndOf="@+id/add_time"
         android:layout_marginLeft="10dp"
-        android:hint="Datum"/>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="BOKA MÖTE"
-        android:textColor="#ffffff"
-        android:id="@+id/Titel"
-        android:background="#e9be14"
-        android:paddingBottom="20dp"
-        android:paddingTop="20dp"
-        android:paddingLeft="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
+        android:hint="Datum"
+        android:layout_below="@+id/chooseGroup"
         android:layout_alignParentEnd="true" />
 
 
