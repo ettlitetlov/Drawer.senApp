@@ -2,13 +2,11 @@ package com.example.axel.drawer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 
@@ -28,6 +26,7 @@ public class BookAMeeting extends Fragment {
                              Bundle savedInstanceState) {
         //testar lite, här under är det tillagt
         View view = inflater.inflate(R.layout.fragment_book_ameeting, container, false);    //vad som ska visas
+        //boka möte
         Button addGroupMeeting = (Button) view.findViewById(R.id.createMeeting);                //säg att knappen är bokaMöte-knappen
         addGroupMeeting.setOnClickListener(new View.OnClickListener() {
             @Override
