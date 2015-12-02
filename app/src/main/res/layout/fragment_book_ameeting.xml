@@ -98,17 +98,16 @@
         android:layout_marginBottom="10dp"
         android:layout_toRightOf="@+id/createMeeting" />
 
-    <EditText
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="time"
         android:ems="10"
         android:id="@+id/add_time"
         android:layout_below="@+id/chooseGroup"
         android:layout_alignParentStart="true"
-        android:autoText="false"
-        android:hint="Tid"
+        android:hint="@string/init_text"
         android:paddingLeft="10dp"
+        android:onClick="showTimePickerDialog"
         android:layout_toStartOf="@+id/add_Date" />
 
     <EditText
