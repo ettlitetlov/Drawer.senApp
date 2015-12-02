@@ -4,20 +4,20 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/main"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_manu_home"
             android:title="Start" />
         <item
             android:id="@+id/groups"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_group"
             android:title="Grupper" />
-        <item
+     <!--   <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Specifik grupp" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Specifik möte" />
+            android:title="Specifik möte" /> -->
     </group>
 
 </menu>
