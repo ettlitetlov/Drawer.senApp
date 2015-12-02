@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
             toolbar.setTitle("Grupper");                    //ändra titeln till "Grupper"
 
-        } else if (id == R.id.nav_slideshow) {
+    /*    } else if (id == R.id.nav_slideshow) {
             SpecificGroupFragment fragment = new SpecificGroupFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
             fragmentTransaction.commit();
-            toolbar.setTitle("Specifikt möte");             //ändra titeln till "specifikt möte"
+            toolbar.setTitle("Specifikt möte");             //ändra titeln till "specifikt möte" */     //<--vill inte ha de här heller
 
        /* } else if (id == R.id.nav_share) { //tror att de här två är borttagna från menyn nu   
 
