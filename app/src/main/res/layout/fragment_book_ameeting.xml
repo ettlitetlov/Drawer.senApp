@@ -15,8 +15,7 @@
              android:layout_alignParentStart="true"
              android:paddingLeft="10dp"
              android:layout_marginTop="50dp"
-             android:entries="@array/group_array"
-             a/>
+             android:entries="@array/group_array" />
 
          <TextView
              android:layout_width="fill_parent"
@@ -101,25 +100,37 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:id="@+id/add_time"
         android:layout_below="@+id/chooseGroup"
+        android:layout_marginLeft="10dp"
         android:layout_alignParentStart="true"
         android:hint="@string/init_text"
+        android:background="#ffffff"
         android:paddingLeft="10dp"
         android:onClick="showTimePickerDialog"
-        android:layout_toStartOf="@+id/add_Date" />
+        android:layout_alignEnd="@+id/createMeeting" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/add_Date"
-        android:layout_marginLeft="10dp"
-        android:hint="Datum"
-        android:layout_below="@+id/chooseGroup"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/add_date"
+        android:layout_marginLeft="20dp"
+        android:text="@string/date_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignBaseline="@+id/add_time"
+        android:layout_alignBottom="@+id/add_time"
+        android:layout_toEndOf="@+id/add_time" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:background="#00d77127"
+        android:id="@+id/date_button"
+        android:onClick="showDatePickerDialog"
+        android:src="@drawable/calendar"
+        android:layout_alignBottom="@+id/add_time"
+        android:layout_alignEnd="@+id/cancelMeeting" />
 
 
 </RelativeLayout>

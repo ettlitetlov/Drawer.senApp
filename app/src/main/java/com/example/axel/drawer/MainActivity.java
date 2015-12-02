@@ -82,6 +82,11 @@ public class MainActivity extends AppCompatActivity
         newFragment.show(getSupportFragmentManager(), "timePicker");
     }
 
+    public void showDatePickerDialog(View v) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "datePicker");
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
