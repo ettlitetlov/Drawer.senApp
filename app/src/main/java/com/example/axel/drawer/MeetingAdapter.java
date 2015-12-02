@@ -42,9 +42,8 @@ public class MeetingAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-
-
         RelativeLayout layout = (RelativeLayout)layoutInflater.inflate(R.layout.item_meeting_list, parent, false);
+
         TextView date = (TextView)layout.findViewById(R.id.list_date);
         date.setText(meetings.get(position).getDate());
         TextView group = (TextView)layout.findViewById(R.id.list_groupname);

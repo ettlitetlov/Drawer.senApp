@@ -39,7 +39,7 @@
         android:layout_marginTop="29dp" />
 
     <EditText
-        android:layout_width="250dp"
+        android:layout_width="245dp"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
         android:layout_below="@+id/textView"
@@ -57,7 +57,7 @@
         android:layout_marginTop="27dp" />
 
     <EditText
-        android:layout_width="250dp"
+        android:layout_width="245dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
@@ -76,7 +76,7 @@
         android:layout_marginTop="20dp" />
 
     <EditText
-        android:layout_width="250dp"
+        android:layout_width="245dp"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
@@ -84,7 +84,8 @@
         android:layout_below="@+id/description"
         android:layout_alignParentStart="true"
         android:minLines="3"
-        android:hint="t.ex.  &quot;En grupp för styrelsens medlemmar och deras mål att ta över världen&quot;" />
+        android:hint="t.ex.  &quot;En grupp för styrelsens medlemmar och deras mål att ta över världen&quot;"
+        android:maxLines="4" />
 
     <Button
         android:layout_width="50dp"

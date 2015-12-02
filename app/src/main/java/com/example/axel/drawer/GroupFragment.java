@@ -3,10 +3,10 @@ package com.example.axel.drawer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -24,9 +24,9 @@ public class GroupFragment extends Fragment {
     public GroupFragment() {
         // Required empty public constructor
         String[] people1 = {"Stefan", "Jan", "Annie"};
-        Group group1 = new Group("Regeringen", people1, "picture", "Bestämma saker" );
+        Group group1 = new Group("Regeringen", people1, "slips", "Bestämma saker" );
         String[] people2 = {"Elin", "Rebecca", "Josefine", "Yrsa", "Axel"};
-        Group group2 = new Group("Koma Projekt", people2, "picture", "Bestämma saker" );
+        Group group2 = new Group("Koma Projekt", people2, "clock", "Bestämma saker" );
 
         groupData.add(group1);
         groupData.add(group2);
@@ -44,8 +44,7 @@ public class GroupFragment extends Fragment {
         Button addGroupButton = (Button) view.findViewById(R.id.skapaGrupp);                //säg att knappen är skapaGrupp-knappen
         addGroupButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 // Skicka vidare användaren till nästa fragmenten (addGroup)
                 AddGroupFragment fragment = new AddGroupFragment();
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
@@ -59,6 +58,19 @@ public class GroupFragment extends Fragment {
 
         ListView list = (ListView)view.findViewById(R.id.listOfGroups);
         list.setAdapter(groupAdapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Skicka vidare användaren till nästa fragmenten (addGroup)
+                SpecificGroupFragment fragment = new SpecificGroupFragment();
+                android.support.v4.app.FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
+                fragmentTransaction.commit();
+            }
+        });
 
         return view;
     }

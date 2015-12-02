@@ -4,7 +4,6 @@ package com.example.axel.drawer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +18,7 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 
-public class MainFragment extends Fragment{
+public class MainFragment extends Fragment {
 
     private ArrayList<Meeting> MeetingData = new ArrayList<Meeting>();
     private MeetingAdapter meetingAdapter;
@@ -33,10 +32,6 @@ public class MainFragment extends Fragment{
         MeetingData.add(meet1);
         MeetingData.add(meet2);
         MeetingData.add(meet3);
-    }
-
-    public void onListItemClick(){
-
     }
 
     @Override
@@ -87,5 +82,4 @@ public class MainFragment extends Fragment{
         return view;
 
     }
-
 }
