@@ -48,7 +48,8 @@ public class BookAMeeting extends Fragment {
             @Override
             public void onClick(View v)
             {
-                getFragmentManager().popBackStack();        //Hoppar tillbaka till sidan användaren var på innan
+                //Skicka tillbaka användaren till förra fragmenten
+                getFragmentManager().popBackStack();
 
                 // Visa ett meddelande om att man tröck (heh) på kryss-knappen
                 String message = "Ojoj, det blev inget möte.";

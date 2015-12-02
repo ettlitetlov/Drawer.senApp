@@ -1,5 +1,6 @@
 package com.example.axel.drawer;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.Gravity;
@@ -29,6 +30,7 @@ public class SpecificMeetingFragment extends Fragment {
             public void onClick(View v) {
 
                 // Visa ett meddelande om incheckning
+                v.setBackgroundColor(Color.GRAY);       //ändrar färg på knappen när den blivit tryckt på
                 String message = "Incheckad!";
                 Toast toast = Toast.makeText(getActivity().getApplicationContext(), message, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
@@ -47,6 +49,7 @@ public class SpecificMeetingFragment extends Fragment {
 
                 // Visa ett meddelande om att man tryckt på texten
                 //String message = "Nu får du bjuda på kaffe nästa gång!";
+                v.setBackgroundColor(Color.GRAY);       //ändra färg på knappen när texten blivit tryckt på
                 String message = "Glöm inte att det kanske finns någon som hellre vill ha saft! #bjudpåfika";
                 Toast toast = Toast.makeText(getActivity().getApplicationContext(), message, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);

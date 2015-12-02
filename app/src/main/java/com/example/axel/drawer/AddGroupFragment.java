@@ -35,7 +35,6 @@ public class AddGroupFragment extends Fragment {
             @Override
             public void onClick(View v)
             {
-                //((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Grupper");
                 //Hoppa tillbaka till group-sidan igen
                 getFragmentManager().popBackStack();
 
