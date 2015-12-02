@@ -3,11 +3,10 @@ package com.example.axel.drawer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -80,13 +79,24 @@ public class SpecificGroupFragment extends Fragment {
 
         ListView listStat = (ListView)view.findViewById(R.id.listStats);
         listStat.setAdapter(statisticAdapter);
-        //listStat.setScrollContainer(false);
         justifyListViewHeightBasedOnChildren(listStat);
 
         ListView listMeeting = (ListView)view.findViewById(R.id.listMeeting);
-        //listMeeting.setScrollContainer(false);
         listMeeting.setAdapter(meetingAdapter);
         justifyListViewHeightBasedOnChildren(listMeeting);
+
+        listMeeting.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Skicka vidare användaren till nästa fragmenten (addGroup)
+                SpecificMeetingFragment fragment = new SpecificMeetingFragment();
+                android.support.v4.app.FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
+                fragmentTransaction.commit();
+            }
+        });
 
         return view;
 

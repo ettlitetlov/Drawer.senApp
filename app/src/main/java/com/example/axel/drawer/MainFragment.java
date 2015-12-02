@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -78,6 +79,18 @@ public class MainFragment extends Fragment {
 
         ListView list = (ListView)view.findViewById(R.id.listOfMeetings);
         list.setAdapter(meetingAdapter);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Skicka vidare användaren till nästa fragmenten (addGroup)
+                SpecificMeetingFragment fragment = new SpecificMeetingFragment();
+                android.support.v4.app.FragmentTransaction fragmentTransaction =
+                        getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
+                fragmentTransaction.commit();
+            }
+        });
 
         return view;
 

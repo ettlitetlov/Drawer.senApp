@@ -45,8 +45,6 @@ public class SpecificMeetingFragment extends Fragment {
             @Override
             public void onClick(View v)
             {
-
-
                 // Visa ett meddelande om att man tryckt på texten
                 //String message = "Nu får du bjuda på kaffe nästa gång!";
                 //R.id.check_in.setBackgroundColor(Color.GRAY);       //ändra färg på knappen när texten blivit tryckt på
@@ -57,6 +55,16 @@ public class SpecificMeetingFragment extends Fragment {
 
             }
         });
+
+
+        TextView groupName = (TextView)view.findViewById(R.id.meeting_title);
+        groupName.setText("Möte med Regeringen");
+        TextView place = (TextView)view.findViewById(R.id.place_meeting);
+        place.setText("Stadshuset");
+        TextView time = (TextView)view.findViewById(R.id.time_meeting);
+        time.setText("12:00");
+        TextView description = (TextView)view.findViewById(R.id.description_meeting);
+        description.setText("Bestämma saker som kan vara avgörande när man är en fisk i underlandet som inte kan simma baklänges");
 
         return view;
     }
