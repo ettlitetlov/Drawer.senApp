@@ -3,6 +3,7 @@ package com.example.axel.drawer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,7 @@ public class GroupFragment extends Fragment {
 
         groupAdapter = new GroupAdapter(groupData, getActivity());
 
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Grupper");
         View view = inflater.inflate(R.layout.fragment_group, container, false);    //vad som ska visas?
         //skapa grupp-knapp
         Button addGroupButton = (Button) view.findViewById(R.id.skapaGrupp);                //säg att knappen är skapaGrupp-knappen
