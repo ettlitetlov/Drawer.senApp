@@ -30,13 +30,8 @@ public class BookAMeeting extends Fragment {
             @Override
             public void onClick(View v)
             {
-                // Skicka vidare användaren till nästa fragmenten (MainFragment)
-                MainFragment fragment = new MainFragment();
-                android.support.v4.app.FragmentTransaction fragmentTransaction =
-                        getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, fragment);
-                fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
-                fragmentTransaction.commit();
+                // Skicka tillbaka användaren till förra fragmenten
+                getFragmentManager().popBackStack();
 
                 // Visa ett meddelande om att mötet är tillagd
                 String message = "Mötet tillagt!";
@@ -53,14 +48,7 @@ public class BookAMeeting extends Fragment {
             @Override
             public void onClick(View v)
             {
-                // Skicka tillbaka användaren till där den var innan?       <-- kolla upp detta
-                //tillfälligt kommer användare tillbaka till startsidan
-                MainFragment fragment = new MainFragment();
-                android.support.v4.app.FragmentTransaction fragmentTransaction =
-                        getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
-                fragmentTransaction.replace(R.id.fragment_container, fragment);
-                fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
-                fragmentTransaction.commit();
+                getFragmentManager().popBackStack();        //Hoppar tillbaka till sidan användaren var på innan
 
                 // Visa ett meddelande om att man tröck (heh) på kryss-knappen
                 String message = "Ojoj, det blev inget möte.";

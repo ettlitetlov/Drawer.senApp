@@ -36,13 +36,7 @@ public class AddGroupFragment extends Fragment {
             public void onClick(View v)
             {
                 //Hoppa tillbaka till group-sidan igen
-                GroupFragment fragment = new GroupFragment();
-                android.support.v4.app.FragmentTransaction fragmentTransaction =
-                        getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
-                fragmentTransaction.replace(R.id.fragment_container, fragment);
-                fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
-                fragmentTransaction.commit();
-                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Grupper"); //ändra toolbar-titeln
+                getFragmentManager().popBackStack();
 
                 // Visa ett meddelande om att gruppen är tillagd
                 String message = "Grupp tillagd!";
