@@ -15,8 +15,7 @@
              android:layout_alignParentStart="true"
              android:paddingLeft="10dp"
              android:layout_marginTop="50dp"
-             android:entries="@array/group_array"
-             a/>
+             android:entries="@array/group_array" />
 
          <TextView
              android:layout_width="fill_parent"
