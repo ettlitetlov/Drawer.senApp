@@ -25,9 +25,9 @@ public class GroupFragment extends Fragment {
     public GroupFragment() {
         // Required empty public constructor
         String[] people1 = {"Stefan", "Jan", "Annie"};
-        Group group1 = new Group("Regeringen", people1, "slips", "Bestämma saker" );
+        Group group1 = new Group("Regeringen", people1, "regeringsslips", "Bestämma saker" );
         String[] people2 = {"Elin", "Rebecca", "Josefine", "Yrsa", "Axel"};
-        Group group2 = new Group("Koma Projekt", people2, "clock", "Bestämma saker" );
+        Group group2 = new Group("Koma Projekt", people2, "komaprojekt", "Bestämma saker" );
 
         groupData.add(group1);
         groupData.add(group2);
