@@ -6,62 +6,60 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:paddingBottom="16dp"
-    android:id="@+id/relative_layout">>
+    android:id="@+id/relative_layout"><![CDATA[>
 
-    <FrameLayout
-        android:id="@+id/content_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp">
+    ]]>
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="380dp"
-            android:layout_below="@+id/upcommingMeetings"
-            android:id="@+id/listOfMeetings"
-            android:layout_marginTop="25dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Kommande möten"
+        android:id="@+id/upcommingMeetings"
+        android:textSize="25dp"
+        android:layout_marginLeft="5dp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="65dp" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="center_horizontal|bottom">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/linearLayout">
 
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="Grupper"
-                android:id="@+id/Groups"
-                android:background="@color/accent_material_light"
-                android:layout_marginRight="20dp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Grupper"
+            android:id="@+id/Groups"
+            android:background="#f3df5e"
+            android:layout_marginRight="20dp" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="Boka möte"
-                android:background="@color/accent_material_light"
-                android:id="@+id/BookAMeeting" />
-        </LinearLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Boka möte"
+            android:background="#f3df5e"
+            android:id="@+id/BookAMeeting" />
+    </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Kommande möten"
-            android:id="@+id/upcommingMeetings"
-            android:layout_below="@+id/meny"
-            android:textSize="25dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginLeft="5dp"
-            android:textAlignment="center"
-            android:layout_gravity="center_horizontal|top" />
-
-    </FrameLayout>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="380dp"
+        android:id="@+id/listOfMeetings"
+        android:layout_below="@+id/upcommingMeetings"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/linearLayout" />
 
 </RelativeLayout>
 

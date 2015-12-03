@@ -1,6 +1,5 @@
 package com.example.axel.drawer;
 
-import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +39,7 @@ public class SpecificGroupFragment extends Fragment {
         statisticData.add(stat5);
 
 
-        Meeting meet1 = new Meeting("Regeringen", 12, 0, 151201, "Stadshuset", "Bestämma vem som åker ut denna veckan");
+        Meeting meet1 = new Meeting("Regeringen", 12, 0, "01/12/2015", "Stadshuset", "Bestämma vem som åker ut denna veckan");
         meetingData.add(meet1);
 
 

@@ -1,7 +1,6 @@
 package com.example.axel.drawer;
 
 
-import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -27,9 +26,9 @@ public class MainFragment extends Fragment {
 
     public MainFragment() {
         // Required empty public constructor
-        Meeting meet1 = new Meeting("Regeringen", 12, 0, 151201, "Stadshuset", "Bestämma vem som åker ut denna veckan");
-        Meeting meet2 = new Meeting("Koma Projekt", 13, 15, 151126, "Tp53", "Göra världens bästa app");
-        Meeting meet3 = new Meeting("Schackklubben", 17, 00, 151201, "Colosseum", "Uppvärmingen inför VM" );
+        Meeting meet1 = new Meeting("Regeringen", 12, 0, "01/12/2015", "Stadshuset", "Bestämma vem som åker ut denna veckan");
+        Meeting meet2 = new Meeting("Koma Projekt", 13, 15, "03/12/2015", "Tp53", "Göra världens bästa app");
+        Meeting meet3 = new Meeting("Schackklubben", 17, 00, "09/12/2015", "Colosseum", "Uppvärmingen inför VM" );
 
         MeetingData.add(meet1);
         MeetingData.add(meet2);
