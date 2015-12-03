@@ -23,7 +23,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageButton"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="55dp"
         android:src="#ffffcf4b"
         android:layout_below="@+id/createGroup"
         android:layout_centerHorizontal="true" />
@@ -83,26 +83,28 @@
         android:id="@+id/groupDescription"
         android:layout_below="@+id/description"
         android:layout_alignParentStart="true"
-        android:minLines="3"
-        android:hint="t.ex.  &quot;En grupp för styrelsens medlemmar och deras mål att ta över världen&quot;"
+        android:minLines="2"
+        android:hint="t.ex.  &quot;Vi ska ta över världen&quot;"
         android:maxLines="4" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="AVBRYT"
+        android:textStyle="bold"
         android:id="@+id/Cancel"
-        android:layout_below="@+id/groupDescription"
-        android:layout_alignEnd="@+id/members" />
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/imageButton" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Skapa"
+        android:textStyle="bold"
+
         android:id="@+id/Create"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true" />
+        android:layout_toStartOf="@+id/imageButton" />
 
 
 </RelativeLayout>
