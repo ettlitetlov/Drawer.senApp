@@ -39,11 +39,16 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("SenApp"); //ändra toolbar-titeln
+        //ändra toolbar-titeln
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("SenApp");
+        //ändra färg på toolbar
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.toolbar_light_orange));
+
         meetingAdapter = new MeetingAdapter(MeetingData, getActivity());
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
+
         //Grupp-knapp
         Button groupButton = (Button) view.findViewById(R.id.Groups);
         groupButton.setOnClickListener(new View.OnClickListener() {
