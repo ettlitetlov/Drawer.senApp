@@ -41,6 +41,7 @@ public class GroupFragment extends Fragment {
         groupAdapter = new GroupAdapter(groupData, getActivity());
 
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Grupper");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.toolbar_green));
         View view = inflater.inflate(R.layout.fragment_group, container, false);    //vad som ska visas?
         //skapa grupp-knapp
         Button addGroupButton = (Button) view.findViewById(R.id.skapaGrupp);                //säg att knappen är skapaGrupp-knappen

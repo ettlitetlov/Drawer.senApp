@@ -54,6 +54,8 @@ public class SpecificGroupFragment extends Fragment {
         meetingAdapter = new MeetingAdapterInSpecificGroup(meetingData, getActivity());
 
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Grupp");   //Specifikt för regeringen
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.toolbar_orange));
+
         View view = inflater.inflate(R.layout.fragment_specific_group, container, false);    //vad som ska visas
         Button addGroupButton = (Button) view.findViewById(R.id.newMeeting);                //säg att knappen är nyttMöte-knappen
         addGroupButton.setOnClickListener(new View.OnClickListener() {
