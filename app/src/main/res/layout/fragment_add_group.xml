@@ -10,14 +10,14 @@
     tools:context="com.example.axel.drawer.AddGroupFragment"
     android:nestedScrollingEnabled="false">
 
-    <TextView
+    <!-- <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="SKAPA GRUPP"
         android:id="@+id/createGroup"
         android:layout_alignBottom="@+id/Cancel"
-        android:layout_alignEnd="@+id/editText" />
+        android:layout_alignEnd="@+id/editText" /> -->
 
     <ImageButton
         android:layout_width="100dp"
@@ -88,12 +88,12 @@
         android:maxLines="4" />
 
     <Button
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="X"
+        android:text="AVBRYT"
         android:id="@+id/Cancel"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/groupDescription"
+        android:layout_alignEnd="@+id/members" />
 
     <Button
         android:layout_width="wrap_content"
