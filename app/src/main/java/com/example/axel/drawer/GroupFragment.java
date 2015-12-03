@@ -50,7 +50,7 @@ public class GroupFragment extends Fragment {
                 // Skicka vidare användaren till nästa fragmenten (addGroup)
                 AddGroupFragment fragment = new AddGroupFragment();
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
-                        getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
+                        getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();
@@ -67,7 +67,7 @@ public class GroupFragment extends Fragment {
                 // Skicka vidare användaren till nästa fragmenten (addGroup)
                 SpecificGroupFragment fragment = new SpecificGroupFragment();
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
-                        getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
+                        getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();

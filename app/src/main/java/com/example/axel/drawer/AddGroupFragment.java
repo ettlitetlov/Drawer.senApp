@@ -48,6 +48,24 @@ public class AddGroupFragment extends Fragment {
             }
         });
 
+        Button cancelAdded = (Button) view.findViewById(R.id.Cancel);                //säg att knappen är Cancel-knappen
+        cancelAdded.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                //Hoppa tillbaka till group-sidan igen
+                getFragmentManager().popBackStack();
+
+                // Visa ett meddelande om att gruppen är tillagd
+                String message = "Ingen grupp skapad!";
+                //Toast.makeText(getBaseContext(), "Grupp tillagd!", Toast.LENGTH_SHORT
+                Toast toast = Toast.makeText(getActivity().getApplicationContext(), message, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+
+            }
+        });
+
         return view;
     }
 

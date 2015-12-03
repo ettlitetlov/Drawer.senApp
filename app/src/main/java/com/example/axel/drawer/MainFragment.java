@@ -85,7 +85,7 @@ public class MainFragment extends Fragment {
                 // Skicka vidare användaren till nästa fragmenten (addGroup)
                 SpecificMeetingFragment fragment = new SpecificMeetingFragment();
                 android.support.v4.app.FragmentTransaction fragmentTransaction =
-                        getActivity().getSupportFragmentManager().beginTransaction(); //getActivity() tillagt innan getSupportF…
+                        getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.addToBackStack(null);       //så att man kan gå tillbaka till förra sidan
                 fragmentTransaction.commit();

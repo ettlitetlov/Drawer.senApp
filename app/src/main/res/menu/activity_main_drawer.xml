@@ -18,6 +18,16 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Specifik möte" /> -->
+
+        <!-- Hur ändrar man iconen, tänker kanske du?
+            Här finns det ganska trevliga iconer man kan ladda ned:
+            https://www.google.com/design/icons/index.html#ic_group
+            -högerklicka på "drawable"
+            -"image asset"
+            -"Asset type" -> "action bar and type icons"
+            -den lägger automatiskt upp den i olika dpi för att anpassa
+            efter användaren
+                                    -->
     </group>
 
 </menu>
