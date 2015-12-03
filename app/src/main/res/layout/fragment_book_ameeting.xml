@@ -114,7 +114,7 @@
              android:hint="t.ex. &quot;Diskussion angående störta gamla styrelsen&quot;"
              android:maxLines="2" />
 
-    <ImageButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/add_time"
@@ -124,7 +124,6 @@
         android:hint="@string/init_text"
         android:background="#ffffff"
         android:paddingLeft="10dp"
-        android:src=""
         android:onClick="showTimePickerDialog" />
 
     <TextView

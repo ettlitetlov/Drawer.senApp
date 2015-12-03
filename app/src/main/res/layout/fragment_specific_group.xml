@@ -4,21 +4,71 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
 
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="650dp"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:layout_marginTop="45dp"
     tools:context="com.example.axel.drawer.SpecificGroupFragment">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#FFDD5E32"
+            android:paddingBottom="20dp"
+            android:id="@+id/relative">
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Nytt\nmöte"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/newMeeting"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/imageView"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/meny"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/slips" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Gruppnamn"
+                android:id="@+id/groupName"
+                android:layout_below="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:textSize="30dp"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="X medlemmar"
+                android:id="@+id/groupMembers"
+                android:layout_below="@+id/groupName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
 
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/listStats"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
             android:layout_below="@+id/statistics"
             android:layout_alignParentStart="true" />
 
@@ -26,70 +76,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Statistik:"
+            android:text="Statistik"
             android:id="@+id/statistics"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
             android:layout_below="@+id/listMeeting"
             android:layout_alignParentStart="true"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp" />
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:id="@+id/imageView"
-            android:layout_marginTop="30dp"
-            android:layout_below="@+id/meny"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/slips" />
+            android:layout_marginLeft="5dp"
+            android:textColor="#f0ca42" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Kommande möten:"
+            android:text="Kommande möten"
             android:id="@+id/upcommingMeetings"
-            android:layout_below="@+id/groupMembers"
             android:layout_alignParentStart="true"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Gruppnamn"
-            android:id="@+id/groupName"
-            android:layout_below="@+id/imageView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:textSize="30dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="X medlemmar"
-            android:id="@+id/groupMembers"
-            android:layout_below="@+id/groupName"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:textSize="15dp" />
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/relative"
+            android:textColor="#9ecd3a" />
 
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/listMeeting"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
             android:layout_below="@+id/upcommingMeetings"
             android:layout_alignParentStart="true"
             android:longClickable="false" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nytt\nmöte"
-            android:id="@+id/newMeeting"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true" />
+
 
     </RelativeLayout>
 
