@@ -3,8 +3,8 @@ package com.example.axel.drawer;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -38,6 +38,8 @@ public class BookAMeeting extends Fragment implements TimePickerDialog.OnTimeSet
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.toolbar_light_orange));
 
         View view = inflater.inflate(R.layout.fragment_book_ameeting, container, false);    //vad som ska visas
         //boka möte-knappen

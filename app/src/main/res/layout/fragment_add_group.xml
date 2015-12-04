@@ -19,13 +19,12 @@
         android:layout_alignBottom="@+id/Cancel"
         android:layout_alignEnd="@+id/editText" /> -->
 
-    <ImageButton
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageButton"
-        android:layout_marginTop="55dp"
-        android:src="#ffffcf4b"
-        android:layout_below="@+id/createGroup"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/add_picture"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -34,6 +33,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Gruppnamn:"
         android:id="@+id/textView"
+        android:textColor="#f06f42"
         android:layout_below="@+id/imageButton"
         android:layout_alignParentStart="true"
         android:layout_marginTop="29dp" />
@@ -52,6 +52,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medlemmar:"
         android:id="@+id/members"
+        android:textColor="#f06f42"
         android:layout_below="@+id/editText"
         android:layout_alignParentStart="true"
         android:layout_marginTop="27dp" />
@@ -72,6 +73,7 @@
         android:text="Beskrivning:"
         android:id="@+id/description"
         android:layout_below="@+id/editText2"
+        android:textColor="#f06f42"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp" />
 
@@ -87,25 +89,45 @@
         android:hint="t.ex.  &quot;Vi ska ta över världen&quot;"
         android:maxLines="4" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AVBRYT"
-        android:textStyle="bold"
-        android:id="@+id/Cancel"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/imageButton" />
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/linearLayout">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Skapa"
-        android:textStyle="bold"
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SKAPA"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:id="@+id/createGroup"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="#9ecd3a"
+            android:layout_marginBottom="10dp"
+            android:layout_alignTop="@+id/cancelGroup" />
 
-        android:id="@+id/Create"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/imageButton" />
-
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AVBRYT"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ffffff"
+            android:id="@+id/cancelGroup"
+            android:background="#f06f42"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/createMeeting" />
+    </LinearLayout>
 
 </RelativeLayout>
 

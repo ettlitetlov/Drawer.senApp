@@ -3,7 +3,6 @@ package com.example.axel.drawer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,10 +26,11 @@ public class AddGroupFragment extends Fragment {
         // Inflate the layout for this fragment
 
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Lägg till grupp");  //ändra toolbar-titeln
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.toolbar_orange));
 
         View view = inflater.inflate(R.layout.fragment_add_group, container, false);    //vad som ska visas
         //skapa grupp-knappen
-        Button groupAdded = (Button) view.findViewById(R.id.Create);                //säg att knappen är Create-knappen
+        Button groupAdded = (Button) view.findViewById(R.id.createGroup);                //säg att knappen är Create-knappen
         groupAdded.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -48,7 +48,7 @@ public class AddGroupFragment extends Fragment {
             }
         });
 
-        Button cancelAdded = (Button) view.findViewById(R.id.Cancel);                //säg att knappen är Cancel-knappen
+        Button cancelAdded = (Button) view.findViewById(R.id.cancelGroup);                //säg att knappen är Cancel-knappen
         cancelAdded.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)

@@ -3,6 +3,7 @@ package com.example.axel.drawer;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,9 @@ public class SpecificMeetingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Möte");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.toolbar_light_orange));
 
         View view = inflater.inflate(R.layout.fragment_specific_meeting, container, false);    //vad som ska visas?
         final Button incheckad = (Button) view.findViewById(R.id.check_in);                //säg att knappen är incheckad-knappen
