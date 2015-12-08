@@ -7,16 +7,16 @@
 
 
 
-         <Spinner
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:id="@+id/chooseGroup"
-             android:prompt="@string/spinner_title"
-             android:layout_alignParentStart="true"
-             android:paddingLeft="10dp"
-             android:layout_marginTop="45dp"
-             android:entries="@array/group_array"
-             android:layout_marginBottom="20dp" />
+     <Spinner
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/chooseGroup"
+         android:prompt="@string/spinner_title"
+         android:layout_alignParentStart="true"
+         android:paddingLeft="10dp"
+         android:layout_marginTop="45dp"
+         android:entries="@array/group_array"
+         android:layout_marginBottom="20dp" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -67,7 +67,7 @@
              android:text="Plats"
              android:textColor="#e1b620"
              android:id="@+id/place"
-             android:layout_below="@+id/add_time"
+             android:layout_below="@+id/add_time_image"
              android:layout_alignParentStart="true"
              android:layout_marginTop="20dp"
              android:paddingTop="5dp"
@@ -80,7 +80,6 @@
              android:layout_height="wrap_content"
              android:id="@+id/editText3"
              android:layout_below="@+id/place"
-             android:layout_alignParentStart="true"
              android:paddingLeft="10dp"
              android:hint="t.ex. TP2"
              android:layout_marginLeft="10dp" />
@@ -112,28 +111,41 @@
              android:hint="t.ex. &quot;Diskussion angående störta gamla styrelsen&quot;"
              android:maxLines="2" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/add_time"
-        android:layout_below="@+id/chooseGroup"
-        android:layout_marginLeft="10dp"
-        android:layout_alignParentStart="true"
-        android:hint="@string/init_text"
-        android:background="#ffffff"
-        android:paddingLeft="10dp"
-        android:onClick="showTimePickerDialog" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/add_date"
+        android:id="@+id/add_time"
         android:layout_marginLeft="20dp"
+        android:text="@string/init_text"
+
+        android:layout_alignBaseline="@+id/add_date"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:background="#00d77127"
+        android:id="@+id/add_time_image"
+        android:layout_alignLeft="@+id/add_time"
+        android:layout_below="@+id/chooseGroup"
+        android:onClick="showTimePickerDialog"
+        android:src="@drawable/time_picker_clock"
+        android:layout_marginLeft="50dp" />
+
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/add_date"
+        android:layout_marginLeft="80dp"
         android:text="@string/date_text"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_alignBaseline="@+id/add_time"
-        android:layout_alignBottom="@+id/add_time"
-        android:layout_toEndOf="@+id/add_time" />
+        android:layout_alignBaseline="@+id/add_time_image"
+        android:layout_marginBottom = "20dp"
+        android:layout_alignBottom="@+id/add_time_image"
+        android:layout_toEndOf="@+id/add_time_image" />
 
     <ImageButton
         android:layout_width="50dp"
@@ -143,9 +155,10 @@
         android:id="@+id/date_button"
         android:onClick="showDatePickerDialog"
         android:src="@drawable/calendar"
-        android:layout_alignBottom="@+id/add_time"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/add_time_image"
         android:layout_toEndOf="@+id/add_date"
-        android:layout_marginLeft="20dp" />
+        android:layout_marginLeft="5dp" />
 
 
 </RelativeLayout>

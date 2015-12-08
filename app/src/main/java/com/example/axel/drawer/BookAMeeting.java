@@ -10,7 +10,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -77,6 +79,12 @@ public class BookAMeeting extends Fragment implements TimePickerDialog.OnTimeSet
 
             }
         });
+
+        Spinner spinner = (Spinner) view.findViewById(R.id.chooseGroup);
+        ArrayAdapter<CharSequence> spinneradapter = ArrayAdapter.createFromResource(
+                getActivity(), R.array.group_array, R.layout.custom_spinner_item);
+        spinneradapter.setDropDownViewResource(R.layout.custom_spinner_item);
+        spinner.setAdapter(spinneradapter);
 
         return view;
     }

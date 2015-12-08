@@ -25,6 +25,10 @@
         <item name="android:textColor">#666666</item>
     </style>
 
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">#9edc3a</item>
+    </style>
+
     <style name="SenAppTheme" parent="Theme.AppCompat.Light.NoActionBar" >
         <item name="android:colorPrimary">@color/holo_light_primary</item>
         <item name="android:colorPrimaryDark">@color/holo_light_primary_dark</item>

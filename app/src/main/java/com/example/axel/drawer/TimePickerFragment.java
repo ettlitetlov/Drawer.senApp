@@ -5,7 +5,6 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.text.format.DateFormat;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -29,7 +28,17 @@ public class TimePickerFragment extends DialogFragment
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         // Do something with the time chosen by the user
         TextView tv1=(TextView) getActivity().findViewById(R.id.add_time);
-        tv1.setText(view.getCurrentHour()+":"+view.getCurrentMinute());
+        String hour = String.format("%d",hourOfDay);
+        String min = String.format("%d",minute);
+        if(hourOfDay < 10) {
+            hour = "0" + hour;
+        }
+        if(minute < 10) {
+            min = "0" + min;
+        }
+
+        tv1.setText(hour+":"+min);
+        //tv1.setText(view.getCurrentHour()+":"+view.getCurrentMinute());
 
     }
 }
